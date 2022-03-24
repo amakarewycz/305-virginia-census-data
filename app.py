@@ -11,8 +11,9 @@ with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-c
     counties = json.load(response)
 
 ########### Define a few variables ######
+state = "New York"
 
-tabtitle = 'Virginia Counties'
+tabtitle = f'{state} Counties'
 sourceurl = 'https://www.kaggle.com/muonneutrino/us-census-demographic-data'
 githublink = 'https://github.com/amakarewycz/dash-virginia-counties'
 varlist=['TotalPop', 'Men', 'Women', 'Hispanic',
@@ -33,7 +34,6 @@ varlist=['CountyId', 'State', 'County', 'TotalPop', 'Men', 'Women', 'Hispanic',
 
 #df=pd.read_pickle('resources/va-stats.pkl')
 df=pd.read_csv('resources/acs2017_county_data.csv')
-state = "New York"
 df=df[df['State']=="New York"]
 
 ########### Initiate the app
