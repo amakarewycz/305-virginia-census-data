@@ -16,15 +16,8 @@ state = "New York"
 tabtitle = f'{state} Counties'
 sourceurl = 'https://www.kaggle.com/muonneutrino/us-census-demographic-data'
 githublink = 'https://github.com/amakarewycz/dash-virginia-counties'
-varlist=['TotalPop', 'Men', 'Women', 'Hispanic',
-       'White', 'Black', 'Native', 'Asian', 'Pacific', 'VotingAgeCitizen',
-       'Income', 'IncomeErr', 'IncomePerCap', 'IncomePerCapErr', 'Poverty',
-       'ChildPoverty', 'Professional', 'Service', 'Office', 'Construction',
-       'Production', 'Drive', 'Carpool', 'Transit', 'Walk', 'OtherTransp',
-       'WorkAtHome', 'MeanCommute', 'Employed', 'PrivateWork', 'PublicWork',
-       'SelfEmployed', 'FamilyWork', 'Unemployment', 'RUCC_2013']
 
-varlist=['CountyId', 'State', 'County', 'TotalPop', 'Men', 'Women', 'Hispanic',
+varlist=['TotalPop', 'Men', 'Women', 'Hispanic',
        'White', 'Black', 'Native', 'Asian', 'Pacific', 'VotingAgeCitizen',
        'Income', 'IncomeErr', 'IncomePerCap', 'IncomePerCapErr', 'Poverty',
        'ChildPoverty', 'Professional', 'Service', 'Office', 'Construction',
@@ -32,9 +25,7 @@ varlist=['CountyId', 'State', 'County', 'TotalPop', 'Men', 'Women', 'Hispanic',
        'WorkAtHome', 'MeanCommute', 'Employed', 'PrivateWork', 'PublicWork',
        'SelfEmployed', 'FamilyWork', 'Unemployment']
 
-#df=pd.read_pickle('resources/va-stats.pkl')
-df=pd.read_csv('resources/acs2017_county_data.csv')
-df=df[df['State']=="New York"]
+df=pd.read_pickle('resources/ny_acs2017_county_data.pkl')
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
