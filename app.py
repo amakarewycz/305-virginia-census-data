@@ -25,7 +25,11 @@ varlist=['TotalPop', 'Men', 'Women', 'Hispanic',
        'WorkAtHome', 'MeanCommute', 'Employed', 'PrivateWork', 'PublicWork',
        'SelfEmployed', 'FamilyWork', 'Unemployment']
 
-df=pd.read_pickle('resources/ny_acs2017_county_data.pkl')
+#df=pd.read_pickle('resources/ny_acs2017_county_data.pkl')
+
+df=pd.read_csv('resources/acs2017_county_data.csv')
+df=df[df['State']=="New York"]
+
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
